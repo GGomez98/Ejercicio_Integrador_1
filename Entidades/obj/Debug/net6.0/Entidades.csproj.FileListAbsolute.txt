@@ -1,0 +1,11 @@
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\bin\Debug\net6.0\Entidades.deps.json
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\bin\Debug\net6.0\Entidades.dll
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\bin\Debug\net6.0\Entidades.pdb
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\obj\Debug\net6.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\obj\Debug\net6.0\Entidades.AssemblyInfoInputs.cache
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\obj\Debug\net6.0\Entidades.AssemblyInfo.cs
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\obj\Debug\net6.0\Entidades.csproj.CoreCompileInputs.cache
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\obj\Debug\net6.0\Entidades.dll
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\obj\Debug\net6.0\refint\Entidades.dll
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\obj\Debug\net6.0\Entidades.pdb
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\Entidades\obj\Debug\net6.0\ref\Entidades.dll
