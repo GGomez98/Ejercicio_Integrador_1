@@ -8,8 +8,8 @@
         private Numeracion SegundoOperando { get { return segundoOperando; } set { segundoOperando = value; } }
         public Operacion(Numeracion primerOperando, Numeracion segundoOperando) 
         { 
-            this.PrimerOperando = primerOperando;
-            this.SegundoOperando = segundoOperando;
+            PrimerOperando = primerOperando;
+            SegundoOperando = segundoOperando;
         }
 
         public Numeracion Operar(char operador)

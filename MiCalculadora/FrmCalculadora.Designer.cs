@@ -41,6 +41,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            label5 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(31, 48);
+            label1.Location = new Point(22, 49);
             label1.Name = "label1";
             label1.Size = new Size(246, 65);
             label1.TabIndex = 0;
@@ -96,7 +97,6 @@
             label2.Size = new Size(221, 37);
             label2.TabIndex = 4;
             label2.Text = "Primer Operador:";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -107,7 +107,6 @@
             label3.Size = new Size(146, 37);
             label3.TabIndex = 5;
             label3.Text = "Operacion:";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -118,7 +117,6 @@
             label4.Size = new Size(250, 37);
             label4.TabIndex = 6;
             label4.Text = "Segundo Operador:";
-            label4.Click += label4_Click;
             // 
             // comboBox1
             // 
@@ -169,6 +167,7 @@
             button2.TabIndex = 11;
             button2.Text = "Limpiar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -179,12 +178,23 @@
             button3.TabIndex = 12;
             button3.Text = "Cerrar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(256, 49);
+            label5.Name = "label5";
+            label5.Size = new Size(0, 65);
+            label5.TabIndex = 13;
             // 
             // FrmCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label5);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -223,5 +233,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Label label5;
     }
 }

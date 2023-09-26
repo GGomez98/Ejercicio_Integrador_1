@@ -14,3 +14,7 @@ D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\MiCalculadora\obj\Debug\n
 D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\MiCalculadora\obj\Debug\net6.0-windows\MiCalculadora.pdb
 D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\MiCalculadora\obj\Debug\net6.0-windows\MiCalculadora.genruntimeconfig.cache
 D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\MiCalculadora\obj\Debug\net6.0-windows\ref\MiCalculadora.dll
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\MiCalculadora\bin\Debug\net6.0-windows\Entidades.dll
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\MiCalculadora\bin\Debug\net6.0-windows\Entidades.pdb
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\MiCalculadora\obj\Debug\net6.0-windows\MiCalculadora.csproj.AssemblyReference.cache
+D:\Gastón\UTN\Laboratorio II\Ejercico_Integrador_Nº1\MiCalculadora\obj\Debug\net6.0-windows\MiCalculadora.csproj.CopyComplete

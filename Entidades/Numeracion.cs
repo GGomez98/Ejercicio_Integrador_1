@@ -33,7 +33,7 @@ namespace Entidades
         {
             if(sistema == ESistema.Binario && !this.EsBinario(Valor))
             {
-                return DecimalBinario(Valor);
+                return this.DecimalBinario(Valor);
             }
             else
             {
