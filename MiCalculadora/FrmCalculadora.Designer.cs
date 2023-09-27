@@ -65,6 +65,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Decimal";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += rdoDecimal_CheckedChanged;
             // 
             // groupBox1
             // 
@@ -87,6 +88,7 @@
             radioButton2.TabStop = true;
             radioButton2.Text = "Binario";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // label2
             // 
@@ -137,7 +139,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(238, 23);
             textBox1.TabIndex = 8;
-            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.TextChanged += txtPrimerOperador_TextChanged;
             // 
             // textBox2
             // 
@@ -145,7 +147,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(238, 23);
             textBox2.TabIndex = 9;
-            textBox2.TextChanged += textBox2_TextChanged;
+            textBox2.TextChanged += txtSegundoOperador_TextChanged;
             // 
             // button1
             // 
@@ -194,6 +196,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            CenterToScreen();
             Controls.Add(label5);
             Controls.Add(button3);
             Controls.Add(button2);

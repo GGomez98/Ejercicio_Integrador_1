@@ -15,25 +15,38 @@ namespace Entidades
     {
         private ESistema sistema;
         private double valorNumerico;
-        private ESistema Sistema { get { return sistema; } }
-        private string Valor { get { return valorNumerico.ToString(); } }
+        public ESistema Sistema { get { return sistema; } }
+        public string Valor { get { return valorNumerico.ToString(); } }
 
-        public Numeracion(ESistema sistema, double valorNumerico)
+        public Numeracion(ESistema sistema, string valor)
         {
-            InicializarValores(sistema, valorNumerico);
+            InicializarValores(sistema, valor);
         }
 
-        private void InicializarValores(ESistema sistema, double valorNumerico)
+        public Numeracion(ESistema sistema, double valor) : this(sistema, valor.ToString()) { }
+
+        private void InicializarValores(ESistema sistema, string valor)
         {
             this.sistema = sistema;
-            this.valorNumerico = valorNumerico;
+            if(sistema == ESistema.Binario)
+            {
+                ConvertirA(ESistema.Decimal);
+            }
+            else if(sistema == ESistema.Decimal)
+            {
+                if(!double.TryParse(valor, out valorNumerico))
+                {
+                    valorNumerico = double.MinValue;
+                }
+
+            }
         }
 
         public string ConvertirA(ESistema sistema)
         {
-            if(sistema == ESistema.Binario && !this.EsBinario(Valor))
+            if(sistema == ESistema.Binario && !EsBinario(Valor))
             {
-                return this.DecimalBinario(Valor);
+                return DecimalABinario(Valor);
             }
             else
             {
@@ -41,9 +54,9 @@ namespace Entidades
             }
         }
 
-        private bool EsBinario(string cadena)
+        private static bool EsBinario(string valor)
         {
-            foreach(char caracter in cadena)
+            foreach(char caracter in valor)
             {
                 if(caracter != '0' && caracter != '1')
                 {
@@ -53,7 +66,7 @@ namespace Entidades
             return true;
         }
 
-        private string DecimalBinario(int valor)
+        private string DecimalABinario(int valor)
         {
             if (valor >= 0)
             {
@@ -79,13 +92,13 @@ namespace Entidades
             }
         }
 
-        private string DecimalBinario(string valor)
+        private string DecimalABinario(string valor)
         {
             int valorInt;
 
             if(int.TryParse(valor, out valorInt))
             {
-                return this.DecimalBinario(valorInt);
+                return DecimalABinario(valorInt);
             }
             else
             {
@@ -93,7 +106,7 @@ namespace Entidades
             }
         }
 
-        private double BinarioDecimal(string valor)
+        private double BinarioADecimal(string valor)
         {
             try
             {
