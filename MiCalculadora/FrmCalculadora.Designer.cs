@@ -36,8 +36,8 @@
             label3 = new Label();
             label4 = new Label();
             comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
             textBox2 = new TextBox();
+            textBox1 = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -88,7 +88,7 @@
             radioButton2.TabStop = true;
             radioButton2.Text = "Binario";
             radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            radioButton2.CheckedChanged += rdoBinario_CheckedChanged;
             // 
             // label2
             // 
@@ -130,24 +130,24 @@
             comboBox1.Location = new Point(321, 298);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 36);
-            comboBox1.TabIndex = 7;
+            comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(526, 298);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(238, 23);
-            textBox1.TabIndex = 8;
-            textBox1.TextChanged += txtPrimerOperador_TextChanged;
+            textBox2.Location = new Point(22, 298);
+            textBox2.Name = "textBox1";
+            textBox2.Size = new Size(238, 23);
+            textBox2.TabIndex = 0;
+            textBox2.TextChanged += txtPrimerOperador_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(22, 298);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(238, 23);
-            textBox2.TabIndex = 9;
-            textBox2.TextChanged += txtSegundoOperador_TextChanged;
+            textBox1.Location = new Point(526, 298);
+            textBox1.Name = "textBox2";
+            textBox1.Size = new Size(238, 23);
+            textBox1.TabIndex = 2;
+            textBox1.TextChanged += txtSegundoOperador_TextChanged;
             // 
             // button1
             // 
@@ -196,13 +196,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            CenterToScreen();
             Controls.Add(label5);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox2);
             Controls.Add(textBox1);
+            Controls.Add(textBox2);
             Controls.Add(comboBox1);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -231,8 +230,8 @@
         private Label label3;
         private Label label4;
         private ComboBox comboBox1;
-        private TextBox textBox1;
         private TextBox textBox2;
+        private TextBox textBox1;
         private Button button1;
         private Button button2;
         private Button button3;

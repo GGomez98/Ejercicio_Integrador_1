@@ -30,7 +30,7 @@ namespace Entidades
             this.sistema = sistema;
             if(sistema == ESistema.Binario)
             {
-                ConvertirA(ESistema.Decimal);
+                this.ConvertirA(ESistema.Decimal);
             }
             else if(sistema == ESistema.Decimal)
             {
@@ -44,7 +44,7 @@ namespace Entidades
 
         public string ConvertirA(ESistema sistema)
         {
-            if(sistema == ESistema.Binario && !EsBinario(Valor))
+            if(sistema == ESistema.Binario)
             {
                 return DecimalABinario(Valor);
             }
@@ -66,7 +66,7 @@ namespace Entidades
             return true;
         }
 
-        private string DecimalABinario(int valor)
+        private static string DecimalABinario(int valor)
         {
             if (valor >= 0)
             {
@@ -92,12 +92,14 @@ namespace Entidades
             }
         }
 
-        private string DecimalABinario(string valor)
+        private static string DecimalABinario(string valor)
         {
-            int valorInt;
+            double valorDouble;
 
-            if(int.TryParse(valor, out valorInt))
+            if(double.TryParse(valor, out valorDouble))
             {
+                double valorDoubleRedondeado = Math.Floor((double)valorDouble);
+                int valorInt = (int)valorDoubleRedondeado;
                 return DecimalABinario(valorInt);
             }
             else
@@ -106,7 +108,7 @@ namespace Entidades
             }
         }
 
-        private double BinarioADecimal(string valor)
+        private static double BinarioADecimal(string valor)
         {
             try
             {
