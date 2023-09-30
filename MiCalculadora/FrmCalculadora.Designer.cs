@@ -28,168 +28,167 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            radioButton1 = new RadioButton();
-            groupBox1 = new GroupBox();
-            radioButton2 = new RadioButton();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            comboBox1 = new ComboBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            lblResultado = new Label();
+            rdbDecimal = new RadioButton();
+            grpSistema = new GroupBox();
+            rdbBinario = new RadioButton();
+            lblPrimerOperador = new Label();
+            lblOperacion = new Label();
+            lblSegundoOperador = new Label();
+            cmbOperador = new ComboBox();
+            txtPrimerOperador = new TextBox();
+            txtSegundoOperador = new TextBox();
+            btnOperar = new Button();
+            btnLimpiar = new Button();
+            btnCerrar = new Button();
             label5 = new Label();
-            groupBox1.SuspendLayout();
+            grpSistema.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lblResultado
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(22, 49);
-            label1.Name = "label1";
-            label1.Size = new Size(246, 65);
-            label1.TabIndex = 0;
-            label1.Text = "Resultado:";
+            lblResultado.AutoSize = true;
+            lblResultado.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblResultado.Location = new Point(12, 41);
+            lblResultado.Name = "lblResultado";
+            lblResultado.Size = new Size(246, 65);
+            lblResultado.TabIndex = 0;
+            lblResultado.Text = "Resultado:";
             // 
-            // radioButton1
+            // rdbDecimal
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(6, 22);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(68, 19);
-            radioButton1.TabIndex = 2;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Decimal";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += rdoDecimal_CheckedChanged;
+            rdbDecimal.AutoSize = true;
+            rdbDecimal.Location = new Point(6, 22);
+            rdbDecimal.Name = "rdbDecimal";
+            rdbDecimal.Size = new Size(68, 19);
+            rdbDecimal.TabIndex = 2;
+            rdbDecimal.TabStop = true;
+            rdbDecimal.Text = "Decimal";
+            rdbDecimal.UseVisualStyleBackColor = true;
+            rdbDecimal.CheckedChanged += rdbDecimal_CheckedChanged;
             // 
-            // groupBox1
+            // grpSistema
             // 
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Location = new Point(284, 168);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(181, 58);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Representar el resultado en:";
+            grpSistema.Controls.Add(rdbBinario);
+            grpSistema.Controls.Add(rdbDecimal);
+            grpSistema.Location = new Point(284, 168);
+            grpSistema.Name = "grpSistema";
+            grpSistema.Size = new Size(181, 58);
+            grpSistema.TabIndex = 1;
+            grpSistema.TabStop = false;
+            grpSistema.Text = "Representar el resultado en:";
             // 
-            // radioButton2
+            // rdbBinario
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(96, 22);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(62, 19);
-            radioButton2.TabIndex = 3;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Binario";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += rdoBinario_CheckedChanged;
+            rdbBinario.AutoSize = true;
+            rdbBinario.Location = new Point(96, 22);
+            rdbBinario.Name = "rdbBinario";
+            rdbBinario.Size = new Size(62, 19);
+            rdbBinario.TabIndex = 3;
+            rdbBinario.TabStop = true;
+            rdbBinario.Text = "Binario";
+            rdbBinario.UseVisualStyleBackColor = true;
+            rdbBinario.CheckedChanged += rdbBinario_CheckedChanged;
             // 
-            // label2
+            // lblPrimerOperador
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(22, 249);
-            label2.Name = "label2";
-            label2.Size = new Size(221, 37);
-            label2.TabIndex = 4;
-            label2.Text = "Primer Operador:";
+            lblPrimerOperador.AutoSize = true;
+            lblPrimerOperador.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPrimerOperador.Location = new Point(22, 249);
+            lblPrimerOperador.Name = "lblPrimerOperador";
+            lblPrimerOperador.Size = new Size(221, 37);
+            lblPrimerOperador.TabIndex = 9;
+            lblPrimerOperador.Text = "Primer Operador:";
             // 
-            // label3
+            // lblOperacion
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(307, 249);
-            label3.Name = "label3";
-            label3.Size = new Size(146, 37);
-            label3.TabIndex = 5;
-            label3.Text = "Operacion:";
+            lblOperacion.AutoSize = true;
+            lblOperacion.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOperacion.Location = new Point(307, 249);
+            lblOperacion.Name = "lblOperacion";
+            lblOperacion.Size = new Size(146, 37);
+            lblOperacion.TabIndex = 8;
+            lblOperacion.Text = "Operacion:";
             // 
-            // label4
+            // lblSegundoOperador
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(514, 249);
-            label4.Name = "label4";
-            label4.Size = new Size(250, 37);
-            label4.TabIndex = 6;
-            label4.Text = "Segundo Operador:";
+            lblSegundoOperador.AutoSize = true;
+            lblSegundoOperador.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSegundoOperador.Location = new Point(514, 249);
+            lblSegundoOperador.Name = "lblSegundoOperador";
+            lblSegundoOperador.Size = new Size(250, 37);
+            lblSegundoOperador.TabIndex = 7;
+            lblSegundoOperador.Text = "Segundo Operador:";
             // 
-            // comboBox1
+            // cmbOperador
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.ItemHeight = 28;
-            comboBox1.Items.AddRange(new object[] { "+", "-", "*", "/" });
-            comboBox1.Location = new Point(321, 298);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 36);
-            comboBox1.TabIndex = 1;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cmbOperador.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbOperador.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbOperador.FormattingEnabled = true;
+            cmbOperador.ItemHeight = 28;
+            cmbOperador.Items.AddRange(new object[] { "+", "-", "*", "/" });
+            cmbOperador.Location = new Point(321, 298);
+            cmbOperador.Name = "cmbOperador";
+            cmbOperador.Size = new Size(121, 36);
+            cmbOperador.TabIndex = 5;
             // 
-            // textBox1
+            // txtPrimerOperador
             // 
-            textBox2.Location = new Point(22, 298);
-            textBox2.Name = "textBox1";
-            textBox2.Size = new Size(238, 23);
-            textBox2.TabIndex = 0;
-            textBox2.TextChanged += txtPrimerOperador_TextChanged;
+            txtPrimerOperador.Location = new Point(22, 298);
+            txtPrimerOperador.Name = "txtPrimerOperador";
+            txtPrimerOperador.Size = new Size(238, 23);
+            txtPrimerOperador.TabIndex = 4;
+            txtPrimerOperador.TextChanged += txtPrimerOperador_TextChanged;
             // 
-            // textBox2
+            // txtSegundoOperador
             // 
-            textBox1.Location = new Point(526, 298);
-            textBox1.Name = "textBox2";
-            textBox1.Size = new Size(238, 23);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += txtSegundoOperador_TextChanged;
+            txtSegundoOperador.Location = new Point(526, 298);
+            txtSegundoOperador.Name = "txtSegundoOperador";
+            txtSegundoOperador.Size = new Size(238, 23);
+            txtSegundoOperador.TabIndex = 6;
+            txtSegundoOperador.TextChanged += txtSegundoOperador_TextChanged;
             // 
-            // button1
+            // btnOperar
             // 
-            button1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(59, 360);
-            button1.Name = "button1";
-            button1.Size = new Size(172, 57);
-            button1.TabIndex = 10;
-            button1.Text = "Operar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnOperar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            btnOperar.Location = new Point(59, 360);
+            btnOperar.Name = "btnOperar";
+            btnOperar.Size = new Size(172, 57);
+            btnOperar.TabIndex = 7;
+            btnOperar.Text = "Operar";
+            btnOperar.UseVisualStyleBackColor = true;
+            btnOperar.Click += button1_Click;
             // 
-            // button2
+            // btnLimpiar
             // 
-            button2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(293, 360);
-            button2.Name = "button2";
-            button2.Size = new Size(172, 57);
-            button2.TabIndex = 11;
-            button2.Text = "Limpiar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnLimpiar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLimpiar.Location = new Point(293, 360);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(172, 57);
+            btnLimpiar.TabIndex = 8;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += button2_Click;
             // 
-            // button3
+            // btnCerrar
             // 
-            button3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(559, 360);
-            button3.Name = "button3";
-            button3.Size = new Size(172, 57);
-            button3.TabIndex = 12;
-            button3.Text = "Cerrar";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnCerrar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCerrar.Location = new Point(559, 360);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(172, 57);
+            btnCerrar.TabIndex = 9;
+            btnCerrar.Text = "Cerrar";
+            btnCerrar.UseVisualStyleBackColor = true;
+            btnCerrar.Click += button3_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(256, 49);
+            label5.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(260, 53);
             label5.Name = "label5";
-            label5.Size = new Size(0, 65);
-            label5.TabIndex = 13;
+            label5.Size = new Size(0, 50);
+            label5.TabIndex = 10;
             // 
             // FrmCalculadora
             // 
@@ -197,44 +196,44 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label5);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(textBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(groupBox1);
-            Controls.Add(label1);
+            Controls.Add(btnCerrar);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnOperar);
+            Controls.Add(txtSegundoOperador);
+            Controls.Add(txtPrimerOperador);
+            Controls.Add(cmbOperador);
+            Controls.Add(lblSegundoOperador);
+            Controls.Add(lblOperacion);
+            Controls.Add(lblPrimerOperador);
+            Controls.Add(grpSistema);
+            Controls.Add(lblResultado);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmCalculadora";
             Text = "Calculadora de Gastón Gómez";
             Load += FrmCalculadora_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            grpSistema.ResumeLayout(false);
+            grpSistema.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private RadioButton radioButton1;
-        private GroupBox groupBox1;
-        private RadioButton radioButton2;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private ComboBox comboBox1;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Label lblResultado;
+        private RadioButton rdbDecimal;
+        private GroupBox grpSistema;
+        private RadioButton rdbBinario;
+        private Label lblPrimerOperador;
+        private Label lblOperacion;
+        private Label lblSegundoOperador;
+        private ComboBox cmbOperador;
+        private TextBox txtPrimerOperador;
+        private TextBox txtSegundoOperador;
+        private Button btnOperar;
+        private Button btnLimpiar;
+        private Button btnCerrar;
         private Label label5;
     }
 }

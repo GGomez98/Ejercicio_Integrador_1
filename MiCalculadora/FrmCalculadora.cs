@@ -17,21 +17,36 @@ namespace MiCalculadora
         private void FrmCalculadora_Load(object sender, EventArgs e)
         {
             CenterToScreen();
-            radioButton1.Checked = true;
+            rdbDecimal.Checked = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            primerOperando = new Numeracion(ESistema.Decimal, textBox2.Text);
-            segundoOperando = new Numeracion(ESistema.Decimal, textBox1.Text);
-            calculadora = new Operacion(primerOperando, segundoOperando);
+            primerOperando = new Numeracion(ESistema.Decimal, txtPrimerOperador.Text);
+            segundoOperando = new Numeracion(ESistema.Decimal, txtSegundoOperador.Text);
+            calculadora = new Operacion(primerOperando, segundoOperando); 
+            switch (cmbOperador.SelectedIndex)
+            {
+                case 1:
+                    resultado = calculadora.Operar('-');
+                    break;
+                case 2:
+                    resultado = calculadora.Operar('*');
+                    break;
+                case 3:
+                    resultado = calculadora.Operar('/');
+                    break;
+                default:
+                    resultado = calculadora.Operar('+');
+                    break;
+            }
             set_Resultado();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox2.Text = "";
-            textBox1.Text = "";
+            txtPrimerOperador.Text = "";
+            txtSegundoOperador.Text = "";
             label5.Text = "";
             resultado = null;
         }
@@ -49,10 +64,6 @@ namespace MiCalculadora
         {
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void txtSegundoOperador_TextChanged(object sender, EventArgs e)
         {
         }
@@ -61,38 +72,27 @@ namespace MiCalculadora
         {
             int primerOperandoInt;
             int segundoOperandoInt;
-            if (int.TryParse(textBox1.Text, out primerOperandoInt) && int.TryParse(textBox2.Text, out segundoOperandoInt))
+            if (int.TryParse(txtSegundoOperador.Text, out primerOperandoInt) && int.TryParse(txtPrimerOperador.Text, out segundoOperandoInt))
             {
-                switch (comboBox1.SelectedIndex)
-                {
-                    case 1:
-                        resultado = calculadora.Operar('-');
-                        break;
-                    case 2:
-                        resultado = calculadora.Operar('*');
-                        break;
-                    case 3:
-                        resultado = calculadora.Operar('/');
-                        break;
-                    default:
-                        resultado = calculadora.Operar('+');
-                        break;
-                }
                 string resultadoConvertido = resultado.ConvertirA(sistema);
                 label5.Text = resultadoConvertido;
             }
+            else 
+            { 
+                label5.Text = "Numero Invalido"; 
+            }
         }
 
-        private void rdoDecimal_CheckedChanged(object sender, EventArgs e)
+        private void rdbDecimal_CheckedChanged(object sender, EventArgs e)
         {
             sistema = ESistema.Decimal;
-            if(resultado is not null)
+            if (resultado is not null)
             {
                 set_Resultado();
             }
         }
 
-        private void rdoBinario_CheckedChanged(object sender, EventArgs e)
+        private void rdbBinario_CheckedChanged(object sender, EventArgs e)
         {
             sistema = ESistema.Binario;
             if (resultado is not null)
