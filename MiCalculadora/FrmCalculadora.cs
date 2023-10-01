@@ -70,17 +70,8 @@ namespace MiCalculadora
 
         private void set_Resultado()
         {
-            int primerOperandoInt;
-            int segundoOperandoInt;
-            if (int.TryParse(txtSegundoOperador.Text, out primerOperandoInt) && int.TryParse(txtPrimerOperador.Text, out segundoOperandoInt))
-            {
-                string resultadoConvertido = resultado.ConvertirA(sistema);
-                label5.Text = resultadoConvertido;
-            }
-            else 
-            { 
-                label5.Text = "Numero Invalido"; 
-            }
+           string resultadoConvertido = resultado.ConvertirA(sistema);
+           label5.Text = resultadoConvertido;
         }
 
         private void rdbDecimal_CheckedChanged(object sender, EventArgs e)
